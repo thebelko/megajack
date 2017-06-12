@@ -1,0 +1,63 @@
+.now-play {
+    padding: 12px 0 16px 16px;
+    border-bottom: 1px solid #dfe0e6;
+    background: #fff;
+    max-width: 300px;
+    @media (min-width: 550px) {
+        display: inline-block;
+        width: 242px;
+    }
+    @media (min-width: 800px) {
+        display: block;
+        width: 240px;
+    }
+    &:last-child {
+        border-radius: 0 0 3px 3px;
+    }
+    img {
+        width: 58px;
+        height: 42px;
+        object-fit: cover;
+    }
+    &__img-wrap {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 8px;
+    }
+    &__right-wrap {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+    }
+    &__title {
+        font-family: $open-sans;
+        font-size: 12px;
+        font-weight: 700;
+        color: #ff8400;
+        text-decoration: none;
+    }
+
+    &__number-people {
+        font-family: $open-sans;
+        font-size: 12px;
+        font-weight: 600;
+        color: #696969;
+        position: relative;
+        padding-left: 16px;
+        &::before {
+            content: '';
+            @include bg-svg($man-user);
+            position: absolute;
+            left: 0;
+            top: 3px;
+            opacity: .6;
+        }
+
+    }
+    &__title-bot {
+        font-family: $open-sans;
+        font-size: 12px;
+        font-weight: 600;
+        color: #2888b9;
+    }
+}

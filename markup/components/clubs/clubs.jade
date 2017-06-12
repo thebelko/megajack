@@ -1,0 +1,48 @@
+mixin clubs(data)
+    +b.clubs
+        +e.title Рейтинг клубов
+        .top-club-img
+            A(href='#').top-club-btn Играть на деньги
+        +e.inner-wrap
+            - for (var i = 0; i < 5; i++)
+                +e.one
+                    +e.img-wrap
+                        +e.IMG(src='static/img/content/club-logo.png')
+                    +e.right-wrap
+                        +e.text-wrap
+                            +e.text
+                                +e.A(href='#').club-name Million
+                                +e.static-text Выиграшей за месяц
+                                +e.sum 2789346 руб
+                            +e.circle 4.7
+
+                        +e.btn-wrap
+                            +e.A(href='#').link Играть в клубе
+
+
+
+
+
+mixin clubs-no-banner(data)
+    +b.clubs.clubs--inner-page
+        +e.inner-wrap.clubs__inner-wrap--inner-page
+            - for (var i = 0; i < 5; i++)
+                +e.one.clubs__one--inner-page
+                    +e.img-wrap
+                        +e.IMG(src='static/img/content/club-logo.png')
+                    +e.right-wrap
+                        +e.text-wrap
+                            +e.text
+                                +e.A(href='#').club-name.clubs__club-name--inner-page Million
+                                +e.text-inner
+                                    +e.static-text Выиграшей за месяц
+                                    +e.sum 2789346 руб
+                            +e.circle.clubs__circle--inner-page 4.7
+
+                        +e.btn-wrap
+                            +e.A(href='#').link Играть в клубе
+
+
+
+
+
